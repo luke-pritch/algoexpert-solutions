@@ -8,13 +8,17 @@ export function twoNumberSum(array: number[], targetSum: number) {
       const secondElement = array[j]
       const sum = firstElement + secondElement
       if (sum === targetSum) {
-        return [firstElement, secondElement]
         console.log('found sum')
+        return [firstElement, secondElement]
       }
     }
   }
   console.log('returned outside the loop')
   return []
+}
+
+interface HashTable<T> {
+  [key: number]: T
 }
 
 const array1 = [3, 5, -4, 8, 11, 1, -1, 6]
