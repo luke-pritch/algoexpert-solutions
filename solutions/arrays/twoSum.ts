@@ -18,6 +18,15 @@ export function twoNumberSum(array: number[], targetSum: number) {
 }
 
 export function twoNumberSum2(array: number[], targetSum: number) {
+  const numberHashTable: HashTable<boolean> = {}
+  for (const element of array) {
+    const possibleSum = targetSum - element
+    if (possibleSum in numberHashTable) {
+      return [possibleSum, element]
+    } else {
+      numberHashTable[element] = true
+    }
+  }
   return []
 }
 
