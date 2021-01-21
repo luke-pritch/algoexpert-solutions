@@ -17,6 +17,10 @@ export function twoNumberSum(array: number[], targetSum: number) {
   return []
 }
 
+export function twoNumberSum2(array: number[], targetSum: number) {
+  return []
+}
+
 interface HashTable<T> {
   [key: number]: T
 }
