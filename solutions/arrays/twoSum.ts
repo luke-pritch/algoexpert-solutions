@@ -3,38 +3,37 @@
 export function twoNumberSum(array: number[], targetSum: number) {
   // Write your code here
   for (let i = 0; i < array.length - 1; i++) {
-    const firstElement = array[i]
+    const firstElement = array[i];
     for (let j = i + 1; j < array.length; j++) {
-      const secondElement = array[j]
-      const sum = firstElement + secondElement
+      const secondElement = array[j];
+      const sum = firstElement + secondElement;
       if (sum === targetSum) {
-        console.log('found sum')
-        return [firstElement, secondElement]
+        console.log('found sum');
+        return [firstElement, secondElement];
       }
     }
   }
-  console.log('returned outside the loop')
-  return []
+  console.log('returned outside the loop');
+  return [];
 }
 
 export function twoNumberSum2(array: number[], targetSum: number) {
-  const numberHashTable: HashTable<boolean> = {}
+  const numberHashTable: HashTable<boolean> = {};
   for (const element of array) {
-    const possibleSum = targetSum - element
+    const possibleSum = targetSum - element;
     if (possibleSum in numberHashTable) {
-      return [possibleSum, element]
-    } else {
-      numberHashTable[element] = true
+      return [possibleSum, element];
     }
+    numberHashTable[element] = true;
   }
-  return []
+  return [];
 }
 
 interface HashTable<T> {
-  [key: number]: T
+  [key: number]: T;
 }
 
-const array1 = [3, 5, -4, 8, 11, 1, -1, 6]
-const target = 10
+const array1 = [3, 5, -4, 8, 11, 1, -1, 6];
+const target = 10;
 
-twoNumberSum(array1, target)
+twoNumberSum(array1, target);

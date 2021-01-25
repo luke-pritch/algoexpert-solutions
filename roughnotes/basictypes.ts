@@ -1,17 +1,14 @@
 // Boolean
-let isDone: boolean = false
+const isDone = false;
 
-let decimal: number = 6
-let hex: number = 0xf00d
+const decimal = 6;
+const hex = 0xf00d;
 
-let list: number[] = [1, 2, 3]
-let list2: Array<number> = [1, 2, 3]
-
-let x: [string, number]
-x = ['whats up', 10]
+const list: number[] = [1, 2, 3];
+const list2: Array<number> = [1, 2, 3];
 
 // type assertions
-let someValue: unknown = 'this is a string'
-let strLength: number = (someValue as string).length
+const someValue: unknown = 'this is a string';
+const strLength: number = (someValue as string).length;
 // or
-let strLengthAngle: number = (<string>someValue).length
+const strLengthAngle: number = (<string>someValue).length;
