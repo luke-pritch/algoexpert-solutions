@@ -17,7 +17,11 @@ export function twoNumberSum(array: number[], targetSum: number) {
   return [];
 }
 
-export function twoNumberSum2(array: number[], targetSum: number) {
+interface HashTable<T> {
+  [key: number]: T;
+}
+
+export function twoNumberSum2(array: number[], targetSum: number): number[] {
   const numberHashTable: HashTable<boolean> = {};
   for (const element of array) {
     const possibleSum = targetSum - element;
@@ -27,10 +31,6 @@ export function twoNumberSum2(array: number[], targetSum: number) {
     numberHashTable[element] = true;
   }
   return [];
-}
-
-interface HashTable<T> {
-  [key: number]: T;
 }
 
 const array1 = [3, 5, -4, 8, 11, 1, -1, 6];

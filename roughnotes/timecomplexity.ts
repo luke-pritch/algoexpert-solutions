@@ -1,18 +1,16 @@
 function sumFirstElement(array: number[]) {
   // O(1)
   const val = 1 + array[0];
-  console.log(val);
   return val;
 }
 
 function sum(array: number[]) {
   // O(n)
-  let sum = 0;
+  let val = 0;
   for (let index = 0; index < array.length; index++) {
-    sum += array[index];
+    val += array[index];
   }
-  console.log(sum);
-  return sum;
+  return val;
 }
 
 function pair(array: number[]) {

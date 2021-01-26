@@ -1,7 +1,7 @@
 // Simple Stack class
 // just use built in push() pop() JS Array methods
 
-export class Stack<T> {
+export default class Stack<T> {
   _store: T[] = [];
 
   push(val: T) {
